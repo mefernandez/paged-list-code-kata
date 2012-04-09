@@ -10,36 +10,36 @@ grow big, the only way to handle them in an efficient way is to chop the list in
 The number of pages depends on the size of the entire list and how many elements are shown in each page. The current page being shown is marked in some way.
 
 Example List 1: 15 elements, 3 pages, 5 elements each page.
-1
-2
-3
-4
-5
 
-Pages: [1], 2, 3
+	1
+	2
+	3
+	4
+	5
+
+	Pages: [1], 2, 3
 
 However, when lists are too big, pages can be too many to show them all. A common solution to this is to skip some pages in the list adding an ellipsis (…).
 
 Example List 2: 150 elements, 30 pages, 5 elements each page, 7 pages listed including ellipsis.
-1
-2
-3
-4
-5
+	1
+	2
+	3
+	4
+	5
 
-Pages: [1], 2, 3, 4, 5, …, 30
+	Pages: [1], 2, 3, 4, 5, …, 30
 
 Finally, the user can jump to another page.
 
 Example List 3: jump to page 10 in previous example
-51
-52
-53
-54
-55
+	51
+	52
+	53
+	54
+	55
 
-Pages: 1, …, 9, [10], 11, …, 30 
-
+	Pages: 1, …, 9, [10], 11, …, 30 
 
 
 Let's go!
