@@ -22,6 +22,7 @@ Example List 1: 15 elements, 3 pages, 5 elements each page.
 However, when lists are too big, pages can be too many to show them all. A common solution to this is to skip some pages in the list adding an ellipsis (…).
 
 Example List 2: 150 elements, 30 pages, 5 elements each page, 7 pages listed including ellipsis.
+
 	1
 	2
 	3
@@ -33,6 +34,7 @@ Example List 2: 150 elements, 30 pages, 5 elements each page, 7 pages listed inc
 Finally, the user can jump to another page.
 
 Example List 3: jump to page 10 in previous example
+
 	51
 	52
 	53
@@ -60,7 +62,7 @@ Write a piece of code that takes:
 
 and puts out a string of comma separated pages with no more than MAX_PAGES listed as elements in the output string and with the current page in brackets. Skipped pages show a "…" string.
 
-Sample output string: [1], 2, 3, …, 30
+	Sample output string: [1], 2, 3, …, 30
 
 It is required for the first and last pages to always appear. It is desirable to be able to jump to next and previous pages to the current one.
 
