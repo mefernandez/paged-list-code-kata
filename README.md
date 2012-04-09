@@ -5,7 +5,7 @@ Introduction
 ----------------
 
 Showing a list of elements is a common task in web programming. And when lists
-grow big, the only way to handle them in an efficient way is to chop the list into pages, each pages containing a fixed number of elements.
+grow big, the only way to handle them in an efficient way is to chop the list into pages, each page containing a fixed number of elements.
 
 The number of pages depends on the size of the entire list and how many elements are shown in each page. The current page being shown is marked in some way.
 
@@ -55,6 +55,7 @@ Some instructions
 ------------------------
 
 Write a piece of code that takes:
+
 - list size
 - elements per page
 - current page
