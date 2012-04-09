@@ -65,5 +65,5 @@ and puts out a string of comma separated pages with no more than MAX_PAGES liste
 
 	Sample output string: [1], 2, 3, …, 30
 
-It is required for the first and last pages to always appear. It is desirable to be able to jump to next and previous pages to the current one.
+It is required for the first and last pages to always appear. It is desirable to be able to jump to next and previous pages from current one.
 
