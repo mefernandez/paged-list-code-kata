@@ -70,5 +70,24 @@ describe('Kata Paged List',function(){
   it('decorate page 2', function() {
     expect(pager.decorateCurrentPage("1,2,3", 2)).toBe("1,[2],3");
   });
+  
+  it('force an ellipsis', function() {
+    var list_size = 20;
+    pager.items_in_each_page = 5;
+    pager.max_pages = 3;
+    var currentPage = 1;
+    expect(pager.list(list_size, currentPage)).toBe('[1],...,4');
+  });
+  
+  it('a simple ellipsis range', function() {
+    pager.max_pages = 3;
+    var expectedEllipsis = {begin: 2, end: 3};
+    expect(pager.calculateEllipsisRange(4)).toEqual(expectedEllipsis);
+  });
 
+  it('insert ellipsis in pages', function() {
+    pager.max_pages = 3;
+    var range = {begin: 2, end: 3};
+    expect(pager.insertEllipsis("1,2,3,4", range)).toEqual("1,...,4");
+  });
 });
