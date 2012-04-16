@@ -94,6 +94,7 @@ brain got stuck at determining how to calculate how many pages are necessary to
 hold 10 items, 5 per page. It seemed pretty easy: just divide the total number of items by how many items fit per page, right? Well, it doesn't work.
 
 Example: 5 items per page, integer division of (N/5) + 1
+
   1 item -->  1 page (1/5)+1=1
   2 items --> 1 page (2/5)+1=1
   ...
@@ -128,5 +129,3 @@ It's a dumb mistake, but I'm sure it would have been a problem if I didn't have 
 
 Conclusion: write tests. It's the best way to stay clear of bugs in the code.
 For you know, errare humanum est.
-
-
