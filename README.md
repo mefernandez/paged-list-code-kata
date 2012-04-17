@@ -95,23 +95,23 @@ hold 10 items, 5 per page. It seemed pretty easy: just divide the total number o
 
 Example: 5 items per page, integer division of (N/5) + 1
 
-  1 item -->  1 page (1/5)+1=1
-  2 items --> 1 page (2/5)+1=1
-  ...
-  5 items --> 2 pages (5/5)+1=2 ... FAIL
+	1 item -->  1 page (1/5)+1=1
+ 	2 items --> 1 page (2/5)+1=1
+ 	...
+	5 items --> 2 pages (5/5)+1=2 ... FAIL
 
 I was teaching a TDD training course when this popped. I asked for the students opinion. Taking the Modulus and using Math.floor() where some of the options.
 Later, I found out the solution was indeed really simple:
 
-  var pages = (N-1)/5+1
+	var pages = (N-1)/5+1
 
 But, I just couldn't find the easy way to do integer division in Javascript, so
 I did it old school.
 
-  var remainder = (items-1) % this.items_in_each_page;
-  var dividend = (items-1) - remainder;
-  var quotient = dividend / this.items_in_each_page;
-  var lastPage = quotient + 1; 
+	var remainder = (items-1) % this.items_in_each_page;
+	var dividend = (items-1) - remainder;
+	var quotient = dividend / this.items_in_each_page;
+	var lastPage = quotient + 1; 
 
 Too wordy, but it works!
 
@@ -119,11 +119,11 @@ As soon as I got through this, I started needing to test the non-API methods.
 It was necessary to uncover dumb bugs, like calculating the number of pages
 like this:
 
-  var range = this.calculateEllipsisRange(lastPage-firstPage);
+	var range = this.calculateEllipsisRange(lastPage-firstPage);
 
 Which is not correct, since it gives one less page than expected. The right way is:
 
-  var range = this.calculateEllipsisRange(lastPage-firstPage+1);
+	var range = this.calculateEllipsisRange(lastPage-firstPage+1);
 
 It's a dumb mistake, but I'm sure it would have been a problem if I didn't have tests in place.
 
